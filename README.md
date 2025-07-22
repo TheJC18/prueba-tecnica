@@ -38,6 +38,7 @@ Bienvenido a mi solución para la prueba técnica. Este repositorio contiene **t
 Para levantar la aplicación completa (Frontend + Backend) en local:
 
 #### Requisitos Previos
+
 - **PHP 7.4** o superior
 - **Navegador web** moderno
 - **Terminal/CMD** con acceso a PHP
@@ -45,20 +46,23 @@ Para levantar la aplicación completa (Frontend + Backend) en local:
 #### Pasos de Despliegue
 
 1. **Inicia el Backend (API PHP)**
+
    ```bash
    cd backend
    php -S localhost:8000
    ```
-   ✅ Backend corriendo en: `http://localhost:8000`
 
+   ✅ Backend corriendo en: `http://localhost:8000`
 2. **Inicia el Frontend (en otra terminal)**
+
    ```bash
    # Desde la raíz del proyecto
    php -S localhost:3000
    ```
-   ✅ Frontend corriendo en: `http://localhost:3000`
 
+   ✅ Frontend corriendo en: `http://localhost:3000`
 3. **Accede a la aplicación**
+
    - **🌐 Frontend Principal**: http://localhost:3000/frontend/
    - **🔌 API Backend**: http://localhost:8000/manager.php
    - **⚛️ React Version**: http://localhost:3000/react/
@@ -66,18 +70,19 @@ Para levantar la aplicación completa (Frontend + Backend) en local:
 ### 📋 Implementaciones Individuales
 
 1. **Backend PHP:**
+
    ```bash
    cd backend/
    # Ver README.md para instrucciones completas
    ```
-
 2. **Frontend Vanilla:**
+
    ```bash
    cd frontend/
    # Se conecta automáticamente al backend en puerto 8000
    ```
-
 3. **React App:**
+
    ```bash
    cd react/
    npm install
@@ -123,36 +128,14 @@ curl -X GET "http://localhost:8000/manager.php"
 
 Una vez desplegado el proyecto completo:
 
-| Servicio | URL | Puerto | Descripción |
-|----------|-----|--------|-------------|
-| **Frontend Principal** | http://localhost:3000/frontend/ | 3000 | Aplicación web principal |
-| **API Backend** | http://localhost:8000/manager.php | 8000 | API REST para gestión de tareas |
-| **Backend Test UI** | http://localhost:8000/ | 8000 | Interfaz de prueba del backend |
-| **React Version** | http://localhost:3000/react/ | 3000 | Versión alternativa en React |
-
-## 🚨 Solución de Problemas
-
-### Error: "Port already in use"
-```bash
-# Verifica qué está usando el puerto
-netstat -ano | findstr :8000
-netstat -ano | findstr :3000
-
-# Usa puertos alternativos si es necesario
-php -S localhost:8001  # Para backend
-php -S localhost:3001  # Para frontend
-```
-
-### Error: "Permission denied" en tasks.json
-```bash
-# En Windows (PowerShell como administrador)
-icacls backend/tasks.json /grant Everyone:F
-
-# En Linux/Mac
-chmod 666 backend/tasks.json
-```
+| Servicio                     | URL                               | Puerto | Descripción                     |
+| ---------------------------- | --------------------------------- | ------ | -------------------------------- |
+| **Frontend Principal** | http://localhost:3000/frontend/   | 3000   | Aplicación web principal        |
+| **API Backend**        | http://localhost:8000/manager.php | 8000   | API REST para gestión de tareas |
+| **React Version**      | http://localhost:3000/react/      | 3000   | Aplicacion en REACT              |
 
 ### Frontend no conecta con Backend
+
 - ✅ Verifica que ambos servidores estén corriendo
 - ✅ Asegúrate de que el backend esté en puerto 8000
 - ✅ Revisa la consola del navegador para errores CORS
