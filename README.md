@@ -179,6 +179,6 @@ Si tienes alguna pregunta sobre las implementaciones o decisiones técnicas, no 
 
 ---
 
-**¡Gracias por revisar mi prueba técnica!** 🙏
+**¡Gracias por revisar mi pryecto!** 🙏
 
 Espero que las diferentes implementaciones demuestren mi capacidad para adaptarme a diferentes tecnologías y enfoques según las necesidades del proyecto.
